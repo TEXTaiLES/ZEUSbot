@@ -722,7 +722,7 @@ python3 arm_control.py
 ![Image](https://github.com/user-attachments/assets/5501c1ec-950c-4470-9387-5def4679facc)
 
 
-## ROS2 UGV with Robotic_Arm
+## ROS2 UGV with 3 Dof Robotic_Arm
 
 ```shell
 colcon build
@@ -754,3 +754,44 @@ and the result
 
 and collection images is inside to the florder `data` the file `image_data_arm2`
 
+## ROS2 UGV with 6 Dof Robotic_Arm
+```shell
+colcon build
+colcon build --symlink-install
+```
+after  
+```shell 
+source install/setup.bash
+```
+and finally:
+```shell
+ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml 
+
+```
+in a separate terminal:
+
+```shell
+python3 arm_control.py
+```
+
+![Image](https://github.com/user-attachments/assets/fbc66810-228a-4826-aad3-cc7919c49719)
+
+Or
+
+in a separate terminal:
+
+```shell
+ros2 run robot_controller go_with_arm
+```
+
+![Image](https://github.com/user-attachments/assets/f3a1d00b-75ff-486b-979e-7e5efe5551b1)
+
+and the result 
+
+</div>
+ <div style="text-align:center;">
+    <img src="image/result2.png" alt="23" width="800">
+</div>
+
+
+and collection images is inside to the florder `data` the file `image_data_arm3`

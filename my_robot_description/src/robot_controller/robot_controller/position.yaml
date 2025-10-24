@@ -1,6 +1,29 @@
 poses:
-  - {x: 1.2, z: 0.0, phi: 328}
-  - {x: 0.73, z: 0.82, phi: 157}
-  - {x: 0.81, z: 0.24, phi: 152}
-  - {x: 0.32, z: 0.0, phi: 230}
-  
+  - yaw1: 15
+    pitch1: -90
+    pitch2: 90
+    yaw2: 0
+    pitch3: 0
+    roll1: 0
+
+  - yaw1: 15
+    pitch1: -68
+    pitch2: 127
+    yaw2: 0
+    pitch3: 35
+    roll1: 0
+
+  - yaw1: 15
+    pitch1: 0
+    pitch2: 50
+    yaw2: 0
+    pitch3: 16
+    roll1: 0
+
+  - yaw1: 15
+    pitch1: 0
+    pitch2: 27
+    yaw2: 0
+    pitch3: 16
+    roll1: 0
+

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="lidar_length3" value="0.02"/>
+    <xacro:property name="lidar_radius3" value="0.02"/>
+ 
+
+    <link name="lidar_link3">
+
+            <visual>
+                <geometry>
+                    <cylinder radius="${lidar_radius3}" length="${lidar_length3}" />
+                </geometry>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <material name="grey" />
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="${lidar_radius3}" length="${lidar_length3}" />
+                </geometry>
+                <origin xyz="0 0 0" rpy="0 0 0" />            
+            </collision>
+            <xacro:cylinder_inertia m="0.0001" r="${2*lidar_radius3}" h="${2*lidar_length3}" 
+                                    xyz="0 0 0" rpy="${pi / 2.0} 0 0" />    
+
+     </link>
+
+     <joint name="camera_lidar_joint3" type="fixed">
+         <parent link="camera_link"/>
+         <child link="lidar_link3" />
+         <origin xyz="0 0 0.04" rpy="0 0 0 " />
+     </joint>
+
+
+    <gazebo reference="lidar_link3">
+        <material>Gazebo/Red</material> 
+        <self_collide>false</self_collide>
+        <sensor type="ray" name="head_hokuyo_sensor3">
+             <pose>10 0 10 0 0 0</pose>
+             <visualize>true</visualize>
+             <update_rate>30</update_rate>
+            <ray>
+             <scan>
+              <horizontal>
+                <samples>10</samples>                 <!-- 10 ακτίνες -->
+          <resolution>1</resolution>
+          <min_angle>-0.0436332</min_angle>     <!-- -2.5° σε rad -->
+          <max_angle>0.0436332</max_angle> 
+
+
+
+               </horizontal>
+              </scan>
+               <range>
+                    <min>0.10</min>
+                    <max>30.0</max>
+                   <resolution>0.01</resolution>
+                 </range>
+                 <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.01</stddev>
+                 </noise>
+            </ray>
+            <plugin name="gazebo_ros_ray_sensor3" filename="libgazebo_ros_ray_sensor.so">
+                   <topic_name>/scan</topic_name>
+                   <frame_name>lidar_link3</frame_name>
+                   <output_type>sensor_msgs/LaserScan</output_type>
+            </plugin>
+
+
+        </sensor>
+
+    </gazebo>
+
+
+
+</robot>

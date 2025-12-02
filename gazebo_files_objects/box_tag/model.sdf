@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="box_tag">
+    <static>false</static>
+    <link name="link">
+      <pose>0 0 0 0 0 -1.57</pose>  <!-- Ύψωσε το μοντέλο 1 μέτρο πάνω -->
+
+      <!-- Οπτική εμφάνιση -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://box_tag/box.obj</uri>
+            <scale>0.0 0.25 0.25</scale>  <!-- Μικρότερη κλίμακα -->
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://box_tag/materials/scripts/box_tag.material</uri>
+            <name>box_tag_material</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- Σύγκρουση (Collision) -->
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://box_tag/box.obj</uri>
+            <scale>0.0 0.0 1.2</scale>  <!-- Ίδια κλίμακα με το Visual -->
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="foresia">
+    <static>false</static>
+    <link name="link">
+      <pose>0 0 0 0 0 -1.57</pose>  <!-- Ύψωσε το μοντέλο 1 μέτρο πάνω -->
+      
+      <!-- Οπτική εμφάνιση -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://foresia/foresia.obj</uri>
+            <scale>1.2 1.2 1.2</scale>  <!-- Μικρότερη κλίμακα -->
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://foresia/materials/scripts/foresia.material</uri>
+            <name>foresia_material</name>
+          </script>
+        </material>
+      </visual>
+
+      <!-- Σύγκρουση (Collision) -->
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://foresia/foresia.obj</uri>
+            <scale>1.2 1.2 1.2 </scale>  <!-- Ίδια κλίμακα με το Visual -->
+          </mesh>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>
+

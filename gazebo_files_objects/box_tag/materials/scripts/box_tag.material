@@ -1,0 +1,13 @@
+material box_tag_material
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+               texture 2.png
+            }
+        }
+    }
+}

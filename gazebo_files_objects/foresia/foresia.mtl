@@ -1,0 +1,13 @@
+# Blender MTL File: 'Ballet_costume_rococo_dress_LOW.blend'
+# Material Count: 1
+
+newmtl Mekko100V_Low_u1_v1
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd Ballet_costume_rococo_dress_LOW_u1_v1.jpg

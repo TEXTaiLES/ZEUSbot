@@ -1,4 +1,9 @@
-﻿# ROS2 for Beginners 2
+﻿# Documentation
+Additional documentation can be found here:
+https://textailes.github.io/UGV-documentation/
+
+
+# ROS2 for Beginners 2
 First, we’ll see how to create a world in Gazebo, build our own robot car, and view it in RViz and Gazebo .
 
 ## Gazebo Create World
@@ -795,3 +800,40 @@ and the result
 
 
 and collection images is inside to the florder `data` the file `image_data_arm3`
+
+## ROS2 UGV with 6-DoF Arm: Simultaneous Robot and Camera Pose Tracking.
+
+```shell
+colcon build
+colcon build --symlink-install
+```
+after  
+```shell 
+source install/setup.bash
+```
+and finally:
+```shell
+ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml 
+```
+
+ in a separate terminal:
+```shell
+ros2 launch my_robot_bringup world_tf.launch.py
+```
+
+in a separate terminal:
+
+```shell
+ros2 run robot_controller go_with_arm
+```
+
+ in a separate terminal:
+
+```shell
+ros2 run robot_controller position_detect
+```
+
+![Image](https://github.com/user-attachments/assets/e413311e-e206-49af-94e5-ac78fb7c685c)
+
+
+

@@ -12,7 +12,11 @@ authors:
     email: info@textailes-eccch.eu
 repository-code: 'https://github.com/TEXTaiLES/ZEUSbot'
 abstract: >-
-  Development of an autonomous robotic system for image acquisition. Specifically, the system detects a target object based on a given reference point, navigates toward it, and then maintains a stable distance from the object of interest. Using a robotic arm, the camera is positioned at multiple viewpoints around the object to achieve better coverage. Subsequently, a 3D reconstruction of the object is performed based on the captured images
+  Development of an autonomous robotic system for image acquisition.
+  Specifically, the system detects a target object based on a given reference point, 
+  navigates toward it, and then maintains a stable distance from the object of interest. 
+  Using a robotic arm, the camera is positioned at multiple viewpoints around the object to achieve better coverage.
+  Subsequently, a 3D reconstruction of the object is performed based on the captured images
 keywords:
   - ROS2
   - GAZEBO
